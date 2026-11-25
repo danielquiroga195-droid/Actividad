@@ -3,48 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club | Radio Cocoteo FM</title>
+    <title>Club Cocoteo | Radio Cocoteo FM</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="brand">COCOTEO FM 104.9</div>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="programacion.html">Programación</a>
-            <a href="club.html" class="active">Club</a>
+    <header class="navbar">
+        <div class="logo">
+            <span class="neon-pink">COCOTEO</span> <span class="neon-cyan">FM</span>
+            <small>104.9 VICE CITY</small>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">En Vivo</a></li>
+                <li><a href="programacion.html">Programación & DJs</a></li>
+                <li><a href="club.html" class="active">Club Cocoteo</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <h1>Club de Oyentes</h1>
-            <p>Envía tu pedido musical y revisa los productos de la emisora.</p>
+    <main class="container">
+        <section class="page-header fade-in">
+            <h1>CLUB VIP <span class="neon-cyan">COCOTEO</span></h1>
+            <p>Pide tu tema al aire o consigue mercancía oficial de la emisora más pegada de Vice City.</p>
         </section>
 
-        <section class="info-box">
-            <h2>Pedir canción</h2>
-            <form id="form-pedido">
-                <input type="text" id="input-cancion" placeholder="Escribe el nombre de la canción" required>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-            <p id="mensaje-enviado"></p>
-        </section>
+        <div class="two-columns fade-in">
+            <!-- Formulario interactivo para pedir canciones -->
+            <section class="card form-section">
+                <h2>🎤 PIDE TU <span class="neon-pink">SALUDO O TEMA</span></h2>
+                <form id="request-form">
+                    <div class="form-group">
+                        <label for="listener-name">Tu Apodo en Vice City:</label>
+                        <input type="text" id="listener-name" placeholder="Ej: El Socio de Little Haiti" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="song-request">Canción y Artista:</label>
+                        <input type="text" id="song-request" placeholder="Ej: Gasolina - Daddy Yankee" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shoutout">Mensaje para la cabina:</label>
+                        <textarea id="shoutout" rows="3" placeholder="Manda un saludo a tu banda..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-neon full-width">ENVIAR A CABINA</button>
+                </form>
 
-        <section class="list-section">
-            <div class="box">
-                <h3>Camiseta Cocoteo FM</h3>
-                <p>Precio: $35 USD</p>
-            </div>
-            <div class="box">
-                <h3>Gorra Vice City</h3>
-                <p>Precio: $25 USD</p>
-            </div>
-        </section>
+                <!-- Lista dinámica donde aparecen los pedidos enviados -->
+                <div class="requests-feed">
+                    <h4>Últimos pedidos en cola:</h4>
+                    <ul id="requests-list">
+                        <li><strong>Lucía_VC:</strong> Pidió <em>"Titi Me Preguntó"</em> - ¡Saludos desde el motel!</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Tienda Merch -->
+            <section class="merch-section">
+                <h2>👕 MERCH <span class="neon-cyan">OFICIAL</span></h2>
+                <div class="merch-grid">
+                    <div class="card merch-card">
+                        <!-- PON AQUÍ TU IMAGEN DE CAMISETA -->
+                        <img src="img/camiseta.jpg" alt="Camiseta Cocoteo" onerror="this.style.display='none'">
+                        <h3>Camiseta Neón 84</h3>
+                        <p class="price">$35 USD</p>
+                        <button class="btn-outline buy-btn" data-item="Camiseta Neón 84">Añadir al carrito</button>
+                    </div>
+                    <div class="card merch-card">
+                        <!-- PON AQUÍ TU IMAGEN DE GORRA -->
+                        <img src="img/gorra.jpg" alt="Gorra Cocoteo" onerror="this.style.display='none'">
+                        <h3>Gorra Trucker Vice</h3>
+                        <p class="price">$25 USD</p>
+                        <button class="btn-outline buy-btn" data-item="Gorra Trucker Vice">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div id="cart-notification" class="cart-toast hidden"></div>
+            </section>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>Radio Cocoteo FM - Vice City 104.9</p>
+    <footer>
+        <p>© 2026 Radio Cocoteo FM 104.9 - Leonida / Vice City.</p>
     </footer>
 
     <script src="script.js"></script>

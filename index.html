@@ -5,32 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Cocoteo FM | Vice City 104.9</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="brand">COCOTEO FM 104.9</div>
-        <nav class="nav">
-            <a href="index.html" class="active">Inicio</a>
-            <a href="programacion.html">Programación</a>
-            <a href="club.html">Club</a>
+    <header class="navbar">
+        <div class="logo">
+            <span class="neon-pink">COCOTEO</span> <span class="neon-cyan">FM</span>
+            <small>104.9 VICE CITY</small>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">En Vivo</a></li>
+                <li><a href="programacion.html">Programación & DJs</a></li>
+                <li><a href="club.html">Club Cocoteo</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <h1>Radio Cocoteo FM - Vice City</h1>
-            <p>Bienvenidos a la emisora de Leonida con música tropical, urbana y noticias de la ciudad.</p>
-            <button id="btn-alerta" class="btn">Sintonizar frecuencia</button>
+    <main class="container">
+        <!-- Sección Hero / Banner Principal -->
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <span class="badge-live">● AL AIRE DESDE LEONIDA</span>
+                <h1>EL RITMO CALIENTE DE <span class="neon-pink">VICE CITY</span></h1>
+                <p>Reggaetón clásico, dembow playero, salsa brava y los chismes más duros de Ocean Drive. Sintoniza la frecuencia oficial del caos tropical.</p>
+                
+                <!-- Reproductor Interactivo -->
+                <div class="radio-player">
+                    <div class="album-art">
+                        <!-- AQUÍ PUEDES PONER TU IMAGEN DE PORTADA -->
+                        <img src="img/portada-radio.jpg" alt="Portada Cocoteo FM" onerror="this.style.display='none'">
+                        <div class="vinyl-placeholder"></div>
+                    </div>
+                    <div class="track-info">
+                        <span class="label-playing">SONANDO AHORA:</span>
+                        <h3 id="song-title">Noches de Neon en Starfish Island</h3>
+                        <p id="song-artist">DJ El Chacal ft. La Reina del Perreo</p>
+                        
+                        <!-- Ecualizador animado por JS -->
+                        <div class="equalizer" id="equalizer">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button id="play-btn" class="btn-neon">▶ ESCUCHAR EN VIVO</button>
+                        <button id="next-song-btn" class="btn-outline" title="Cambiar emisora/track">⏭</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="info-box">
-            <h2>Últimas noticias</h2>
-            <p>Tráfico intenso en el puente principal hacia Vice Beach y clima cálido durante todo el día.</p>
+        <!-- Noticias Flash de Vice City -->
+        <section class="news-section fade-in">
+            <h2 class="section-title">BOLETÍN DE <span class="neon-cyan">VICE CITY</span></h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <span class="tag">TRÁFICO</span>
+                    <h3>Persecución en el puente de Vice Beach</h3>
+                    <p>Eviten la autopista sur; un Banshee blanco va a 200 km/h seguido por 4 patrullas y un helicóptero.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">RUMBA</span>
+                    <h3>Fiesta clandestina en el Yate</h3>
+                    <p>Esta noche entrada libre para oyentes de Cocoteo FM. Contraseña en puerta: "Puro Coco".</p>
+                </article>
+                <article class="card">
+                    <span class="tag">CLIMA</span>
+                    <h3>35°C con probabilidad de lluvia de balas</h3>
+                    <p>Saca el bloqueador solar y el chaleco antibalas antes de salir a la playa.</p>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>Radio Cocoteo FM - Vice City 104.9</p>
+    <footer>
+        <p>© 2026 Radio Cocoteo FM 104.9 - Leonida / Vice City. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

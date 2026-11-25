@@ -5,41 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programación | Radio Cocoteo FM</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="brand">COCOTEO FM 104.9</div>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="programacion.html" class="active">Programación</a>
-            <a href="club.html">Club</a>
+    <header class="navbar">
+        <div class="logo">
+            <span class="neon-pink">COCOTEO</span> <span class="neon-cyan">FM</span>
+            <small>104.9 VICE CITY</small>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">En Vivo</a></li>
+                <li><a href="programacion.html" class="active">Programación & DJs</a></li>
+                <li><a href="club.html">Club Cocoteo</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <h1>Programación y Locutores</h1>
-            <p>Conoce los espacios diarios de la emisora en Vice City.</p>
+    <main class="container">
+        <section class="page-header fade-in">
+            <h1>PARRILLA DE <span class="neon-pink">PROGRAMACIÓN</span></h1>
+            <p>Filtra por horario y conoce a los locutores que controlan las calles de Leonida.</p>
+            
+            <!-- Filtros interactivos por JS -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="manana">Mañana</button>
+                <button class="filter-btn" data-filter="tarde">Tarde</button>
+                <button class="filter-btn" data-filter="noche">Noche / Perreo</button>
+            </div>
         </section>
 
-        <section class="list-section">
-            <div class="box">
-                <h3>Mañanas Tropicales (06:00 - 11:00)</h3>
-                <p>Conducido por El Papi Chulo. Música latina y reportes de la ciudad.</p>
+        <section class="schedule-grid fade-in" id="schedule-container">
+            <div class="card dj-card" data-category="manana">
+                <div class="dj-img-box">
+                    <!-- PON AQUÍ TU IMAGEN DEL DJ 1 -->
+                    <img src="img/dj1.jpg" alt="El Papi Chulo" onerror="this.style.display='none'">
+                    <span class="time-badge">06:00 - 11:00</span>
+                </div>
+                <h3>Desayuno con Cocoteo</h3>
+                <p class="dj-name">Con: <strong>El Papi Chulo</strong></p>
+                <p>Salsa clásica, café cargado y reportes del tráfico mientras esquivas retenes policiales.</p>
             </div>
-            <div class="box">
-                <h3>Tarde Urbana (14:00 - 19:00)</h3>
-                <p>Conducido por La Mala de Wynwood. Ritmos urbanos y novedades musicales.</p>
+
+            <div class="card dj-card" data-category="tarde">
+                <div class="dj-img-box">
+                    <!-- PON AQUÍ TU IMAGEN DEL DJ 2 -->
+                    <img src="img/dj2.jpg" alt="La Mala de Wynwood" onerror="this.style.display='none'">
+                    <span class="time-badge">14:00 - 19:00</span>
+                </div>
+                <h3>Tardeo en Ocean Drive</h3>
+                <p class="dj-name">Con: <strong>La Mala de Wynwood</strong></p>
+                <p>Los éxitos urbanos del momento, entrevistas exclusivas y llamadas en vivo desde la cárcel del condado.</p>
             </div>
-            <div class="box">
-                <h3>Noche de Club (21:00 - 03:00)</h3>
-                <p>Conducido por DJ Turbo 3000. Mezclas para la noche de Leonida.</p>
+
+            <div class="card dj-card" data-category="noche">
+                <div class="dj-img-box">
+                    <!-- PON AQUÍ TU IMAGEN DEL DJ 3 -->
+                    <img src="img/dj3.jpg" alt="DJ Turbo 3000" onerror="this.style.display='none'">
+                    <span class="time-badge">21:00 - 03:00</span>
+                </div>
+                <h3>Cocoteo Hasta el Suelo</h3>
+                <p class="dj-name">Con: <strong>DJ Turbo 3000</strong></p>
+                <p>Mezclas sin censura de dembow, guaracha y reggaetón old school para prender los clubes nocturnos.</p>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>Radio Cocoteo FM - Vice City 104.9</p>
+    <footer>
+        <p>© 2026 Radio Cocoteo FM 104.9 - Leonida / Vice City.</p>
     </footer>
 
     <script src="script.js"></script>
