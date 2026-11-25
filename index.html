@@ -23,33 +23,40 @@
     </header>
 
     <main class="container">
-        <!-- Sección Hero / Banner Principal -->
         <section class="hero fade-in">
             <div class="hero-content">
-                <span class="badge-live">● AL AIRE DESDE LEONIDA</span>
+                <div class="hero-top-bar">
+                    <span class="badge-live">● AL AIRE DESDE LEONIDA</span>
+                    <span class="listeners-count">🔥 <strong id="listeners-num">14,820</strong> oyentes conectados</span>
+                </div>
                 <h1>EL RITMO CALIENTE DE <span class="neon-pink">VICE CITY</span></h1>
                 <p>Reggaetón clásico, dembow playero, salsa brava y los chismes más duros de Ocean Drive. Sintoniza la frecuencia oficial del caos tropical.</p>
                 
-                <!-- Reproductor Interactivo -->
+                <!-- Reproductor Interactivo Mejorado -->
                 <div class="radio-player">
-                    <div class="album-art">
-                        <!-- AQUÍ PUEDES PONER TU IMAGEN DE PORTADA -->
+                    <div class="album-art" id="album-art">
                         <img src="img/portada-radio.jpg" alt="Portada Cocoteo FM" onerror="this.style.display='none'">
                         <div class="vinyl-placeholder"></div>
                     </div>
                     <div class="track-info">
-                        <span class="label-playing">SONANDO AHORA:</span>
+                        <span class="label-playing">SONANDO AHORA EN 104.9 FM:</span>
                         <h3 id="song-title">Noches de Neon en Starfish Island</h3>
                         <p id="song-artist">DJ El Chacal ft. La Reina del Perreo</p>
                         
-                        <!-- Ecualizador animado por JS -->
                         <div class="equalizer" id="equalizer">
-                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                         </div>
                     </div>
                     <div class="player-controls">
-                        <button id="play-btn" class="btn-neon">▶ ESCUCHAR EN VIVO</button>
-                        <button id="next-song-btn" class="btn-outline" title="Cambiar emisora/track">⏭</button>
+                        <div class="buttons-row">
+                            <button id="prev-song-btn" class="btn-outline" title="Track anterior">⏮</button>
+                            <button id="play-btn" class="btn-neon">▶ ESCUCHAR EN VIVO</button>
+                            <button id="next-song-btn" class="btn-outline" title="Siguiente track">⏭</button>
+                        </div>
+                        <div class="volume-control">
+                            <span>🔊</span>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5" aria-label="Volumen">
+                        </div>
                     </div>
                 </div>
             </div>

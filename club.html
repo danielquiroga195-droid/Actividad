@@ -48,32 +48,44 @@
                     <button type="submit" class="btn-neon full-width">ENVIAR A CABINA</button>
                 </form>
 
-                <!-- Lista dinámica donde aparecen los pedidos enviados -->
                 <div class="requests-feed">
-                    <h4>Últimos pedidos en cola:</h4>
+                    <div class="feed-header">
+                        <h4>Últimos pedidos en cola:</h4>
+                        <button id="clear-requests-btn" class="btn-link">Limpiar historial</button>
+                    </div>
                     <ul id="requests-list">
                         <li><strong>Lucía_VC:</strong> Pidió <em>"Titi Me Preguntó"</em> - ¡Saludos desde el motel!</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Tienda Merch -->
+            <!-- Tienda Merch con Carrito -->
             <section class="merch-section">
                 <h2>👕 MERCH <span class="neon-cyan">OFICIAL</span></h2>
                 <div class="merch-grid">
                     <div class="card merch-card">
-                        <!-- PON AQUÍ TU IMAGEN DE CAMISETA -->
                         <img src="img/camiseta.jpg" alt="Camiseta Cocoteo" onerror="this.style.display='none'">
                         <h3>Camiseta Neón 84</h3>
                         <p class="price">$35 USD</p>
-                        <button class="btn-outline buy-btn" data-item="Camiseta Neón 84">Añadir al carrito</button>
+                        <button class="btn-outline buy-btn" data-item="Camiseta Neón 84" data-price="35">Añadir al carrito</button>
                     </div>
                     <div class="card merch-card">
-                        <!-- PON AQUÍ TU IMAGEN DE GORRA -->
                         <img src="img/gorra.jpg" alt="Gorra Cocoteo" onerror="this.style.display='none'">
                         <h3>Gorra Trucker Vice</h3>
                         <p class="price">$25 USD</p>
-                        <button class="btn-outline buy-btn" data-item="Gorra Trucker Vice">Añadir al carrito</button>
+                        <button class="btn-outline buy-btn" data-item="Gorra Trucker Vice" data-price="25">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Resumen del Carrito VIP -->
+                <div class="card cart-summary">
+                    <h3>🛒 Tu Bolsa VIP (<span id="cart-count">0</span>)</h3>
+                    <ul id="cart-items-list" class="cart-list">
+                        <li class="empty-cart">Aún no has agregado mercancía.</li>
+                    </ul>
+                    <div class="cart-footer">
+                        <span>Total: <strong class="neon-yellow">$<span id="cart-total">0</span> USD</strong></span>
+                        <button id="checkout-btn" class="btn-neon">Comprar</button>
                     </div>
                 </div>
                 <div id="cart-notification" class="cart-toast hidden"></div>

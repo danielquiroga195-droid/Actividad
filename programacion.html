@@ -25,21 +25,22 @@
     <main class="container">
         <section class="page-header fade-in">
             <h1>PARRILLA DE <span class="neon-pink">PROGRAMACIÓN</span></h1>
-            <p>Filtra por horario y conoce a los locutores que controlan las calles de Leonida.</p>
+            <p>Filtra por horario o busca a tu locutor favorito en las calles de Leonida.</p>
             
-            <!-- Filtros interactivos por JS -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="manana">Mañana</button>
-                <button class="filter-btn" data-filter="tarde">Tarde</button>
-                <button class="filter-btn" data-filter="noche">Noche / Perreo</button>
+            <div class="controls-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="manana">Mañana</button>
+                    <button class="filter-btn" data-filter="tarde">Tarde</button>
+                    <button class="filter-btn" data-filter="noche">Noche / Perreo</button>
+                </div>
+                <input type="text" id="dj-search" class="search-input" placeholder="🔍 Buscar DJ, programa o género...">
             </div>
         </section>
 
         <section class="schedule-grid fade-in" id="schedule-container">
             <div class="card dj-card" data-category="manana">
                 <div class="dj-img-box">
-                    <!-- PON AQUÍ TU IMAGEN DEL DJ 1 -->
                     <img src="img/dj1.jpg" alt="El Papi Chulo" onerror="this.style.display='none'">
                     <span class="time-badge">06:00 - 11:00</span>
                 </div>
@@ -50,7 +51,6 @@
 
             <div class="card dj-card" data-category="tarde">
                 <div class="dj-img-box">
-                    <!-- PON AQUÍ TU IMAGEN DEL DJ 2 -->
                     <img src="img/dj2.jpg" alt="La Mala de Wynwood" onerror="this.style.display='none'">
                     <span class="time-badge">14:00 - 19:00</span>
                 </div>
@@ -61,7 +61,6 @@
 
             <div class="card dj-card" data-category="noche">
                 <div class="dj-img-box">
-                    <!-- PON AQUÍ TU IMAGEN DEL DJ 3 -->
                     <img src="img/dj3.jpg" alt="DJ Turbo 3000" onerror="this.style.display='none'">
                     <span class="time-badge">21:00 - 03:00</span>
                 </div>
