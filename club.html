@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club | Radio Cocoteo FM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">COCOTEO FM 104.9</div>
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="programacion.html">Programación</a>
+            <a href="club.html" class="active">Club</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1>Club de Oyentes</h1>
+            <p>Envía tu pedido musical y revisa los productos de la emisora.</p>
+        </section>
+
+        <section class="info-box">
+            <h2>Pedir canción</h2>
+            <form id="form-pedido">
+                <input type="text" id="input-cancion" placeholder="Escribe el nombre de la canción" required>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <p id="mensaje-enviado"></p>
+        </section>
+
+        <section class="list-section">
+            <div class="box">
+                <h3>Camiseta Cocoteo FM</h3>
+                <p>Precio: $35 USD</p>
+            </div>
+            <div class="box">
+                <h3>Gorra Vice City</h3>
+                <p>Precio: $25 USD</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Radio Cocoteo FM - Vice City 104.9</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
